@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos En JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>¿Qué es un evento?</h1>
+    </header>
+    <main>  
+        <section>
+            <div>
+            <p>Un evento Javascript es una característica especial que ha sucedido en nuestra página y a la cuál le asociamos una funcionalidad, de modo que se ejecute cada vez que suceda dicho evento. Por ejemplo, el evento click se dispara cuando el usuario hace click en un elemento de nuestra página.</p>
+            <p>Dichas características pueden ser muy variadas:</p>
+            <ul>
+                <li>Click de ratón del usuario sobre un elemento de la página</li>
+                <li>Pulsación de una tecla específica del teclado</li>
+                <li>Reproducción de un archivo de audio/video</li>
+                <li>Scroll de ratón sobre un elemento de la página</li>
+                <li>El usuario ha activado la opción «Imprimir página»</li>
+            </ul>
+            </div>
+            <div>
+            <p>
+                Como desarrolladores, nuestro objetivo es preparar nuestro código 
+                para que cuando ocurra un determinado evento, se lleve a cabo una funcionalidad asociada. 
+                De esta forma, podemos preparar nuestra página o aplicación para que cuando ocurran ciertos eventos
+                 (que no podemos predecir de otra forma), reaccionen a ellos.
+            </p>
+            <img src="./img/eventos-javascript.png" alt="eventos-javascript" srcset="">
+            </div>  
+            <blockquote>
+                Uno de los eventos más comunes, 
+                es el evento click, que es el que se 
+                produce cuando el usuario hace click 
+                con el ratón en un elemento de la página.
+                Vamos a utilizar este evento a modo de ejemplo
+                en las siguientes secciones de la página, 
+                pero recuerda que hay muchos tipos de eventos 
+                diferentes.
+            </blockquote>
+            
+        </section>
+        <section>
+            <h2>Formas de manejar eventos </h2>
+            <p>Existen varias formas diferentes de
+                 manejar eventos en Javascript.
+                  Vamos a ver cada una de ellas,
+                   con sus particularidades, 
+                   pero antes hagamos un pequeño 
+                   resumen:</p>
+        <table>
+            <thead>
+                <th>Forma</th>
+                <th>Ejemplo</th>
+                <th>Artículo en profundidad</th>                </th>
+            </thead>
+            <tbody>
+               <tr>
+                <td>Mediante atributos HTML	</td>
+                <td><code>.onclick = function() { ... }</code></td>
+                <td><a href="https://lenguajejs.com/javascript/eventos/que-son-eventos/#qu%C3%A9-es-un-evento:~:text=Eventos%20JS%20desde%20atributos%20HTML">Eventos JS desde atributos HTML</a></td>
+                </tr> 
+                <tr>
+                    <td>Mediante propiedades Javascript	</td>
+                    <td><code>&lt;button onClick="..."&gt;&lt;/button&gt;</code></td>
+                    <td><a href="https://lenguajejs.com/javascript/eventos/eventos-javascript/">Eventos JS desde propiedades JavaScript</a></td>
+                    </tr> 
+                <tr>
+                        <td>Mediante addEventListener()	</td>
+                        <td><code>.addEventListener("click", ...)</code></td>
+                        <td><a href="https://lenguajejs.com/javascript/eventos/addeventlistener/">Eventos JS desde listeners</a></td>
+                </tr> 
+                <p>Cada una de estas opciones se puede utilizar para gestionar eventos en Javascript de forma equivalente, pero cada una de ellas tiene sus ventajas y sus desventajas. En los siguientes apartados veremos detalladamente sus características, pero por norma general, lo aconsejable es utilizar la última, los listeners, ya que son las más potentes y flexibles.</p>
+            </section>
+        
+    
+    </main>
+</body>
+</html>

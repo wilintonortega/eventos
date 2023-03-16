@@ -1,0 +1,17 @@
+*{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+html{
+    /* font-size: 62.5%; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img{
+    width: 400px;
+    height: 200px;
+}
+thead th{
+    border: solid 1px;
+}
