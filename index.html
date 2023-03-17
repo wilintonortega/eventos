@@ -4,38 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos En JavaScript</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Eventos mediante JavaScript</title>
+    <script src="main.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Eventos mediante HTML</h1>
+        <h1>Eventos a través del DOM</h1>
     </header>
-    <main>  
+    <main>
         <section>
-            <div>
-                <p>Probablemente, la forma más fácil de trabajar con eventos Javascript es mediante atributos de una etiqueta HTML. Sin embargo, aunque es la más sencilla, también es la menos recomendable, pero es un buen punto de partida para comenzar a trabajar con eventos.
-                </p>
-                <p>Por ejemplo: </p>
-                <code>&lt;button onClick="alert('Hola!')"&gt;Saludar&lt;/button&gt;</code>             
-                <button onclick="alert('Hola!')">Saludar</button>
+            <blockquote>Teniendo en cuenta que es preferible mostrar codigo JavaScript a traves de ficheros externos .js</blockquote>
+            <p>La manera de gestionar los eventos de JavaScript es a traves de las propiedades de JavaScript que se asociaran a propiedades y etiquetas del HTML</p>
 
-                <p>En este ejemplo, cuando el usuario haga click con el ratón en el botón Saludar, se disparará el evento click en ese elemento HTML (&lt;button&gt;). Dicho botón, al tener un atributo onClick (cuando hagas click), ejecutará el código que tenemos asociado en el valor del atributo HTML (en este caso un alert()), que no es más que un mensaje emergente con el texto indicado.</p>
-            </div>
-            <h2>Organizando la funcionalidad</h2>
-          <div>
-            <script src="main.js"></script>
-            <button onclick=hacer()>Saludar</button>
-            <p>A traves del boton Saludar estoy llamando un archivo externo que se llama main.js donde tiene una funcion que se llama hacer(), es mejor hacerlo desde el fichero externo .js, localizando los elementos del DOM con un .querySelector() o similar.
+            &lt;button&gt;Saludar&lt;/button&gt;<br/>
+            &lt;script&gt;     
+            const button = document.querySelector("button");<br/>
+            button.onclick = function() {<br/>
+            alert("Hello!");<br/>
+            }<br/>
+
+            &lt;script&gt;<br/>
+            <span>aplicando a este boton el querySelector</span>
+            <button>SALUDAR</button>
+            <p>
+                en este caso, en lugar de añadir el atributo onClick a nuestro &lt;button&gt;, lo que hacemos es localizarlo mediante querySelector(). Esto podríamos hacerlo mediante una clase, pero en este ejemplo lo hemos hecho directamente mediante el botón, para simplificar.
+                En la linea siguiente, observa que asignamos una función con el código deseado (el código que queremos ejecutar cuando ocurre el evento) en la propiedad .onclick del elemento &lt;button&gt;. Esta es una propiedad especial que pasaremos a explicar a continuación.
+            </p>
+            <span>Utilizando setAttribute()</span>
+            <button class="atributo">saludar con setattribute</button>
+            <p>En este caso se usa el metodo .setAttribute() donde se le añade el atributo onclick con el valor de la funcion que ejecuta el alert</p>
+<span>Resumen: </span>
+            <p>
+                <ul>
+                    <li>A grandes rasgos, se trata de una forma alternativa a gestionar los eventos Javascript desde HTML, pero creando el HTML mediante la API del DOM de Javascript.</li>
+                    <li>En el caso de que necesitemos añadir más de una función al evento, la cosa se puede complicar. Podríamos tener una función que ejecute varias funciones, pero sin duda alguna, utilizar el método .addEventListener() será mucho más cómodo, sencillo y legible.</li>
+                </ul>
 
             </p>
-            <span>En Resumen:</span>
-            <ul>
-                <li>Gestionar eventos Javascript desde HTML es muy sencillo.</li>
-                <li>Hay que tener en cuenta que «mezclamos» código Javascript dentro de HTML.</li>
-                <li>Para que el código sea más legible y fácil de mantener, se recomienda gestionar eventos desde Javascript (DOM) o, mejor aún, gestionar eventos mediante addEventListener().</li>
-            </ul>
-          </div>
+        </section>
+
     </main>
 </body>
 </html>
