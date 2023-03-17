@@ -9,76 +9,33 @@
 </head>
 <body>
     <header>
-        <h1>¿Qué es un evento?</h1>
+        <h1>Eventos mediante HTML</h1>
     </header>
     <main>  
         <section>
             <div>
-            <p>Un evento Javascript es una característica especial que ha sucedido en nuestra página y a la cuál le asociamos una funcionalidad, de modo que se ejecute cada vez que suceda dicho evento. Por ejemplo, el evento click se dispara cuando el usuario hace click en un elemento de nuestra página.</p>
-            <p>Dichas características pueden ser muy variadas:</p>
-            <ul>
-                <li>Click de ratón del usuario sobre un elemento de la página</li>
-                <li>Pulsación de una tecla específica del teclado</li>
-                <li>Reproducción de un archivo de audio/video</li>
-                <li>Scroll de ratón sobre un elemento de la página</li>
-                <li>El usuario ha activado la opción «Imprimir página»</li>
-            </ul>
+                <p>Probablemente, la forma más fácil de trabajar con eventos Javascript es mediante atributos de una etiqueta HTML. Sin embargo, aunque es la más sencilla, también es la menos recomendable, pero es un buen punto de partida para comenzar a trabajar con eventos.
+                </p>
+                <p>Por ejemplo: </p>
+                <code>&lt;button onClick="alert('Hola!')"&gt;Saludar&lt;/button&gt;</code>             
+                <button onclick="alert('Hola!')">Saludar</button>
+
+                <p>En este ejemplo, cuando el usuario haga click con el ratón en el botón Saludar, se disparará el evento click en ese elemento HTML (&lt;button&gt;). Dicho botón, al tener un atributo onClick (cuando hagas click), ejecutará el código que tenemos asociado en el valor del atributo HTML (en este caso un alert()), que no es más que un mensaje emergente con el texto indicado.</p>
             </div>
-            <div>
-            <p>
-                Como desarrolladores, nuestro objetivo es preparar nuestro código 
-                para que cuando ocurra un determinado evento, se lleve a cabo una funcionalidad asociada. 
-                De esta forma, podemos preparar nuestra página o aplicación para que cuando ocurran ciertos eventos
-                 (que no podemos predecir de otra forma), reaccionen a ellos.
+            <h2>Organizando la funcionalidad</h2>
+          <div>
+            <script src="main.js"></script>
+            <button onclick=hacer()>Saludar</button>
+            <p>A traves del boton Saludar estoy llamando un archivo externo que se llama main.js donde tiene una funcion que se llama hacer(), es mejor hacerlo desde el fichero externo .js, localizando los elementos del DOM con un .querySelector() o similar.
+
             </p>
-            <img src="./img/eventos-javascript.png" alt="eventos-javascript" srcset="">
-            </div>  
-            <blockquote>
-                Uno de los eventos más comunes, 
-                es el evento click, que es el que se 
-                produce cuando el usuario hace click 
-                con el ratón en un elemento de la página.
-                Vamos a utilizar este evento a modo de ejemplo
-                en las siguientes secciones de la página, 
-                pero recuerda que hay muchos tipos de eventos 
-                diferentes.
-            </blockquote>
-            
-        </section>
-        <section>
-            <h2>Formas de manejar eventos </h2>
-            <p>Existen varias formas diferentes de
-                 manejar eventos en Javascript.
-                  Vamos a ver cada una de ellas,
-                   con sus particularidades, 
-                   pero antes hagamos un pequeño 
-                   resumen:</p>
-        <table>
-            <thead>
-                <th>Forma</th>
-                <th>Ejemplo</th>
-                <th>Artículo en profundidad</th>                </th>
-            </thead>
-            <tbody>
-               <tr>
-                <td>Mediante atributos HTML	</td>
-                <td><code>.onclick = function() { ... }</code></td>
-                <td><a href="https://lenguajejs.com/javascript/eventos/que-son-eventos/#qu%C3%A9-es-un-evento:~:text=Eventos%20JS%20desde%20atributos%20HTML">Eventos JS desde atributos HTML</a></td>
-                </tr> 
-                <tr>
-                    <td>Mediante propiedades Javascript	</td>
-                    <td><code>&lt;button onClick="..."&gt;&lt;/button&gt;</code></td>
-                    <td><a href="https://lenguajejs.com/javascript/eventos/eventos-javascript/">Eventos JS desde propiedades JavaScript</a></td>
-                    </tr> 
-                <tr>
-                        <td>Mediante addEventListener()	</td>
-                        <td><code>.addEventListener("click", ...)</code></td>
-                        <td><a href="https://lenguajejs.com/javascript/eventos/addeventlistener/">Eventos JS desde listeners</a></td>
-                </tr> 
-                <p>Cada una de estas opciones se puede utilizar para gestionar eventos en Javascript de forma equivalente, pero cada una de ellas tiene sus ventajas y sus desventajas. En los siguientes apartados veremos detalladamente sus características, pero por norma general, lo aconsejable es utilizar la última, los listeners, ya que son las más potentes y flexibles.</p>
-            </section>
-        
-    
+            <span>En Resumen:</span>
+            <ul>
+                <li>Gestionar eventos Javascript desde HTML es muy sencillo.</li>
+                <li>Hay que tener en cuenta que «mezclamos» código Javascript dentro de HTML.</li>
+                <li>Para que el código sea más legible y fácil de mantener, se recomienda gestionar eventos desde Javascript (DOM) o, mejor aún, gestionar eventos mediante addEventListener().</li>
+            </ul>
+          </div>
     </main>
 </body>
 </html>
